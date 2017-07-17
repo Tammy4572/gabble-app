@@ -1,0 +1,182 @@
+*{
+  box-sizing : border-box;
+  outline: 1px solid rgba(255, 0, 0, 0.2);
+}
+img{
+  display: block;
+  width: 100%;
+}
+a{
+  text-decoration: none;
+  color: #FFF;
+}
+body {
+	background: url("../imgs/bg.jpg") no-repeat scroll left center;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	text-align: left;
+	text-decoration: none;
+	height: 500px;
+	color: #666;
+}
+.error {
+    font-size: 24px;
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
+    }
+ /*******************
+INDEX PAGE
+*******************/
+.index-container {
+	/* Center wrapper perfectly */
+	background-color: rgba(255,255,255,0.6);
+	width: 65%;
+	height: 70%;
+	margin: 65px auto;
+	border-radius: 5px;
+}
+.title-container {
+	background-color: rgba(255,255,255,0.2);
+	background-image: url("../imgs/gabble-orange.png");
+	background-repeat: no-repeat;
+	margin-top: 35px;
+	height: 107px;
+	width: 100%;
+	align-content: center;
+}
+
+.index-btn {
+  display: flex;
+  flex-direction: column;
+  padding: 15%;
+  padding-top: 95px;
+}
+button.btn { 
+	margin-bottom: 80px;
+}
+.index-btn a{
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #BE825E;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.index-btn:hover {
+	background-color: #BE825E
+}
+
+.index-btn:active {
+  background-color: #fff;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/*******************
+LOGIN FORM
+*******************/
+.login-container {
+	/* Center wrapper perfectly */
+	background-color: rgba(255,255,255,0.6);
+	padding: 20px 20px 20px 20px;
+	width: 65%;
+	height: 70%;
+	margin: 25px auto;
+	border-radius: 5px;
+}
+.login-form {
+	/* background-color: rgba(255,255,255,0.6); */
+	width: 65%;
+	height: 70%;
+	margin: 65px auto;
+	border-radius: 5px;
+}
+.login-form .inputs {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+.login-form button {
+
+}
+/*******************
+PAGE HEADER
+*******************/
+
+.page-header {
+	padding: 40px 30px 0px 30px;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	font-weight: 500;
+}
+
+.button {
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #BE825E;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {
+	background-color: #BE825E
+}
+
+.button:active {
+  background-color: #BE825E;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*******************
+CONTENT
+*******************/
+.main-container {
+	/* Center wrapper perfectly */
+	background-color: #fff;
+	padding: 20px 20px 20px 20px;
+	width: 100%;
+	height: 100%;
+	margin: 25px auto;
+	border-radius: 5px;
+}
+.nav-bar ul {
+list-style-type: none;
+display: inline-flex;
+}
+.nav-item a{
+font-size: 16px;
+padding: 10px 10px;
+border-right: 2px solid darkgray;
+}
+
+/*******************
+SIGNUP
+*******************/
+.signup-div {
+	height: 600px;
+}
+#signup
+{
+	all:unset;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50%;
+    font-size: 30px;
+    color: #3A3A3C;
+}
+    .inputs {
+        width: calc(100% - 20px); 
+        margin: 10px 0px;
+        font-size: 24px;
+	}
+	.home-div {
+		text-align: right;
+	}

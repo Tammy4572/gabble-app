@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="signup-div">
+    <div class="main-container">
+        <div class="title-container"></div>
+        <div class="page-header">Sign Up</div>
+        <div class="err-msg">{{#errors}}
+            <div class="errors">{{msg}}</div>{{/errors}}<div class="errors">{{unavailable}}</div></div>
+        <form id="signup" action="/signup">
+            <input class="inputs" type="text" name="username" placeholder="User Name: " autofocus/>
+            <input class="inputs" type="email" name="email" placeholder="Email: "/>
+            <input class="inputs" type="password" name="password" placeholder="Password: "/>
+            <input class="inputs" type="password" name="confPassword" placeholder="Confirm Password: "/>
+
+            <button class="button animation" type="submit">Create new Account</button>
+        </form>
+        <div class="home-div"><a href="/login">Already have an account? Log In</a></div>
+    </div>
+</body>
+</html>

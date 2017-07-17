@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-item">
+            <a href="/dashboard"></a><div class="">{{username}}</div>
+        </div>
+        <div class="nav-item">
+            <a href="/gabs"></a>
+        </div>
+        <div class="nav-item">
+            <a href="/create"></a>
+        </div>
+        <div class="nav-item">
+            <a href="/logout"></a>
+        </div>
+    </div>
+    <div class="gab-wrapper">
+        {{#gabs}}
+        <div class="gab-div">
+            <p>{{title}}</p>
+            <div class="gab-details">
+                <p>Author: {{contributor}}</p>
+                <p>{{timestamp}}</p>
+            </div>
+            <div class="likes-section my-gab">
+                <div class="wide-80">
+                    <div>
+                <a class="likes-link swing" href="/likes/{{id}}">{{likes.length}} Likes </a></div></div>
+                <form action="/mygabs/like/{{id}}" method="POST">
+                    <button class="like-button swing" type="submit"></button>
+                </form>
+                <form action="/delete/{{id}}" method="POST">
+                    <button class="delete-button swing" type="submit"></button>
+                </form>
+                <a class="edit-link swing" href="/editgab/{{id}}"></a>
+            </div>
+        </div>
+        {{/gabs}}
+    </div>
+</body>
+</html>

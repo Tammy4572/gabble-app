@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-item">
+            <a href="/dashboard"></a><div class="">{{name}}</div>
+        </div>
+        <div class="nav-item">
+            <a href="/gabs"></a>
+        </div>
+        <div class="nav-item">
+            <a href="/create"></a>
+        </div>
+        <div class="nav-item">
+            <a href="/logout"></a>
+        </div>
+    </div>
+
+    <div class="gab-wrapper">
+        <div class="gab-div">
+            <p>{{gab.content}}</p>
+            <div class="likes">
+                <p>Written By: {{gab.contributor}}</p>
+                <p>{{gab.createdAt}}</p>
+            </div>
+            <p>Like:</p>
+            {{#likes}}
+            <p>{{#.}}{{user.dataValues.name}}{/.}}</p>
+            {{/likes}}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li class="nav-item"><a href="/dashboard">Gabble</a></li>
+            <li class="nav-item"><a href="/creategab">Create A New Gab</a></li>
+            <li class="nav-item"><a href="/dashboard">Logged in as {{username}}</a></li>
+            <li class="nav-item"><a href="/logout">Log Out</a></li>
+        </ul>
+    </nav>
+<div class="main-container">
+    <div class="gab-wrapper">
+        {{#gabs}}
+            <div class="gab-div">
+                <p>{{title}}</p>
+            <div class="gab-details">
+                <p>Author: {{contributor}}</p>
+                <p>{{timestamp}}</p>
+            </div>
+            <div class="likes-div">
+                <a href="/likes/{{id}}">{{likes.length}} Likes: </a>
+            <form action="/like/{{id}}" method="POST">
+                <button class="like-btn" type="submit"></button>
+            </form>
+            </div>
+        </div>
+        {{/gabs}}
+    </div>
+    </div>
+</body>
+</html>

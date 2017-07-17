@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create A Gab</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+       <nav class="nav-bar">
+        <ul>
+            <li class="nav-item"><a href="/dashboard">Gabble</a></li>
+            <li class="nav-item"><a href="/creategab">Create A New Gab</a></li>
+            <li class="nav-item"><a href="/dashboard">Logged in as {{username}}</a></li>
+            <li class="nav-item"><a href="/logout">Log Out</a></li>
+        </ul>
+    </nav>
+    <div class="gab-wrapper">
+            <div class="gab-div">
+                {{#errors}}
+                <p>{{msg}}</p>
+                {{/errors}}
+                <form action="/gabs" method="POST">
+                    <input type="text" name="title" placeholder="Title: "autofocus/>
+                    <input type="text" name="gab" placeholder="Content Here: "/>
+                    
+                    <button class="button animation" type="submit">Submit Message</button>
+                </form>
+            </div>
+    </div>            
+</body>
+</html>
